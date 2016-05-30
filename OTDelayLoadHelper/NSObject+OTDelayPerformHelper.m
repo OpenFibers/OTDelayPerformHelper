@@ -6,12 +6,12 @@
 //  Copyright © 2016 openthread. All rights reserved.
 //
 
-#import "NSObject+OTDelayLoadHelper.h"
-#import "OTDelayLoadHelperDeallocAssistantObject.h"
+#import "NSObject+OTDelayPerformHelper.h"
+#import "OTDelayPerformHelperDeallocAssistantObject.h"
 
-@implementation NSObject (OTDelayLoadHelper)
+@implementation NSObject (OTDelayPerformHelper)
 
-- (void)autoCanceledPerformSelector:(SEL)selector withObject:(nullable id)anArgument afterDelay:(NSTimeInterval)delay
+- (void)autoCanceledPerformSelector:(_Nonnull SEL)selector withObject:(nullable id)anArgument afterDelay:(NSTimeInterval)delay
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:selector object:anArgument];
     [self performSelector:selector withObject:anArgument afterDelay:delay];

@@ -6,13 +6,13 @@
 //  Copyright © 2016 openthread. All rights reserved.
 //
 
-#import "OTDelayLoadHelperDeallocAssistantObject.h"
+#import "OTDelayPerformHelperDeallocAssistantObject.h"
 
-@interface OTDelayLoadHelperDeallocAssistantObject ()
+@interface OTDelayPerformHelperDeallocAssistantObject ()
 @property (nonatomic, strong) NSDictionary *performedSelectorStrings;
 @end
 
-@implementation OTDelayLoadHelperDeallocAssistantObject
+@implementation OTDelayPerformHelperDeallocAssistantObject
 
 - (void)addPerformedSelectorString:(NSString *)performedSelectorString object:(id)anArgument
 {

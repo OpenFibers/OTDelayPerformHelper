@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (OTDelayLoadHelper)
+@interface NSObject (OTDelayPerformHelper)
 
 /**
  *  Delay call a selector with 'auto cancel', that is:
@@ -20,6 +20,6 @@
  *  @param anArgument   The argument to pass to the method when it is invoked. Pass nil if the method does not take an argument.
  *  @param delay        The minimum time before which the message is sent. Specifying a delay of 0 does not necessarily cause the selector to be performed immediately. The selector is still queued on the thread’s run loop and performed as soon as possible.
  */
-- (void)autoCanceledPerformSelector:(SEL)selector withObject:(nullable id)anArgument afterDelay:(NSTimeInterval)delay;
+- (void)autoCanceledPerformSelector:(_Nonnull SEL)selector withObject:(nullable id)anArgument afterDelay:(NSTimeInterval)delay;
 
 @end

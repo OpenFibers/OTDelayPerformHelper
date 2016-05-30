@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OTDelayLoadHelperDeallocAssistantObject : NSObject
+@interface OTDelayPerformHelperDeallocAssistantObject : NSObject
 
 @property (nonatomic, assign) id target;
 
