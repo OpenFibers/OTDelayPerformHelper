@@ -7,24 +7,38 @@
 //
 
 #import "OTDelayPerformHelperDeallocAssistantObject.h"
+#import "OTDelayPerformHelperDeallocAssistantArgumentContainer.h"
 
 @interface OTDelayPerformHelperDeallocAssistantObject ()
-@property (nonatomic, strong) NSDictionary *performedSelectorStrings;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, OTDelayPerformHelperDeallocAssistantArgumentContainer *> *performedSelectorAndArgumentMap;
 @end
 
 @implementation OTDelayPerformHelperDeallocAssistantObject
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.performedSelectorAndArgumentMap = [NSMutableDictionary dictionary];
+    }
+    return self;
+}
+
 - (void)addPerformedSelectorString:(NSString *)performedSelectorString object:(id)anArgument
 {
-    
+    OTDelayPerformHelperDeallocAssistantArgumentContainer *container = [[OTDelayPerformHelperDeallocAssistantArgumentContainer alloc] init];
+    container.argument = anArgument;
+    self.performedSelectorAndArgumentMap[performedSelectorString] = anArgument;
 }
 
 - (void)dealloc
 {
-    for (NSString *selectorString in self.performedSelectorStrings)
+    for (NSString *selectorString in self.performedSelectorAndArgumentMap.allKeys)
     {
         SEL selector = NSSelectorFromString(selectorString);
-        [NSObject cancelPreviousPerformRequestsWithTarget:self.target selector:selector object:nil];
+        OTDelayPerformHelperDeallocAssistantArgumentContainer *container = self.performedSelectorAndArgumentMap[selectorString];
+        [NSObject cancelPreviousPerformRequestsWithTarget:self.target selector:selector object:container.argument];
     }
 }
 

@@ -15,6 +15,7 @@
 		4221A22D1CFBE6E700E9B954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4221A22B1CFBE6E700E9B954 /* LaunchScreen.storyboard */; };
 		4221A2371CFBE70900E9B954 /* NSObject+OTDelayPerformHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221A2361CFBE70900E9B954 /* NSObject+OTDelayPerformHelper.m */; };
 		4221A23A1CFC139A00E9B954 /* OTDelayPerformHelperDeallocAssistantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221A2391CFC139A00E9B954 /* OTDelayPerformHelperDeallocAssistantObject.m */; };
+		4221A23D1CFC1B9D00E9B954 /* OTDelayPerformHelperDeallocAssistantArgumentContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221A23C1CFC1B9D00E9B954 /* OTDelayPerformHelperDeallocAssistantArgumentContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		4221A2361CFBE70900E9B954 /* NSObject+OTDelayPerformHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OTDelayPerformHelper.m"; sourceTree = "<group>"; };
 		4221A2381CFC139A00E9B954 /* OTDelayPerformHelperDeallocAssistantObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTDelayPerformHelperDeallocAssistantObject.h; sourceTree = "<group>"; };
 		4221A2391CFC139A00E9B954 /* OTDelayPerformHelperDeallocAssistantObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDelayPerformHelperDeallocAssistantObject.m; sourceTree = "<group>"; };
+		4221A23B1CFC1B9D00E9B954 /* OTDelayPerformHelperDeallocAssistantArgumentContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTDelayPerformHelperDeallocAssistantArgumentContainer.h; sourceTree = "<group>"; };
+		4221A23C1CFC1B9D00E9B954 /* OTDelayPerformHelperDeallocAssistantArgumentContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDelayPerformHelperDeallocAssistantArgumentContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				4221A2361CFBE70900E9B954 /* NSObject+OTDelayPerformHelper.m */,
 				4221A2381CFC139A00E9B954 /* OTDelayPerformHelperDeallocAssistantObject.h */,
 				4221A2391CFC139A00E9B954 /* OTDelayPerformHelperDeallocAssistantObject.m */,
+				4221A23B1CFC1B9D00E9B954 /* OTDelayPerformHelperDeallocAssistantArgumentContainer.h */,
+				4221A23C1CFC1B9D00E9B954 /* OTDelayPerformHelperDeallocAssistantArgumentContainer.m */,
 			);
 			path = OTDelayLoadHelper;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				4221A2251CFBE6E700E9B954 /* ViewController.m in Sources */,
 				4221A2221CFBE6E700E9B954 /* AppDelegate.m in Sources */,
 				4221A21F1CFBE6E700E9B954 /* main.m in Sources */,
+				4221A23D1CFC1B9D00E9B954 /* OTDelayPerformHelperDeallocAssistantArgumentContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
