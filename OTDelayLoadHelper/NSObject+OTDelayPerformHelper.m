@@ -19,6 +19,7 @@ static void *DeallocAssistantObjectKey = &DeallocAssistantObjectKey;
 - (void)dealloc
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self.target];
+    self.target = nil;
 }
 @end
 
