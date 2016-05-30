@@ -14,6 +14,7 @@
 		4221A22A1CFBE6E700E9B954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4221A2291CFBE6E700E9B954 /* Assets.xcassets */; };
 		4221A22D1CFBE6E700E9B954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4221A22B1CFBE6E700E9B954 /* LaunchScreen.storyboard */; };
 		4221A2371CFBE70900E9B954 /* NSObject+OTDelayLoadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221A2361CFBE70900E9B954 /* NSObject+OTDelayLoadHelper.m */; };
+		4221A23A1CFC139A00E9B954 /* OTDelayLoadHelperDeallocAssistantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4221A2391CFC139A00E9B954 /* OTDelayLoadHelperDeallocAssistantObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		4221A22E1CFBE6E700E9B954 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4221A2351CFBE70900E9B954 /* NSObject+OTDelayLoadHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OTDelayLoadHelper.h"; sourceTree = "<group>"; };
 		4221A2361CFBE70900E9B954 /* NSObject+OTDelayLoadHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OTDelayLoadHelper.m"; sourceTree = "<group>"; };
+		4221A2381CFC139A00E9B954 /* OTDelayLoadHelperDeallocAssistantObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTDelayLoadHelperDeallocAssistantObject.h; sourceTree = "<group>"; };
+		4221A2391CFC139A00E9B954 /* OTDelayLoadHelperDeallocAssistantObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDelayLoadHelperDeallocAssistantObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			children = (
 				4221A2351CFBE70900E9B954 /* NSObject+OTDelayLoadHelper.h */,
 				4221A2361CFBE70900E9B954 /* NSObject+OTDelayLoadHelper.m */,
+				4221A2381CFC139A00E9B954 /* OTDelayLoadHelperDeallocAssistantObject.h */,
+				4221A2391CFC139A00E9B954 /* OTDelayLoadHelperDeallocAssistantObject.m */,
 			);
 			path = OTDelayLoadHelper;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4221A2371CFBE70900E9B954 /* NSObject+OTDelayLoadHelper.m in Sources */,
+				4221A23A1CFC139A00E9B954 /* OTDelayLoadHelperDeallocAssistantObject.m in Sources */,
 				4221A2251CFBE6E700E9B954 /* ViewController.m in Sources */,
 				4221A2221CFBE6E700E9B954 /* AppDelegate.m in Sources */,
 				4221A21F1CFBE6E700E9B954 /* main.m in Sources */,

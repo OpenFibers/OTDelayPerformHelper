@@ -7,11 +7,14 @@
 //
 
 #import "NSObject+OTDelayLoadHelper.h"
+#import "OTDelayLoadHelperDeallocAssistantObject.h"
 
 @implementation NSObject (OTDelayLoadHelper)
 
-- (void)delayCallSelector:(SEL)selector delay:(NSTimeInterval)delay
+- (void)autoCanceledPerformSelector:(SEL)selector withObject:(nullable id)anArgument afterDelay:(NSTimeInterval)delay
 {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:selector object:anArgument];
+    [self performSelector:selector withObject:anArgument afterDelay:delay];
     
 }
 
