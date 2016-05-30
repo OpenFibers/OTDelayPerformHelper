@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NSObject+OTDelayPerformHelper.h"
 
 @interface ViewController ()
 
@@ -14,14 +15,40 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        self.title = @"1";
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc
+{
+    NSLog(@"dealloced %@", self.title);
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    UIButton *testButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [testButton setTitle:@"Test push" forState:UIControlStateNormal];
+    [testButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [testButton addTarget:self action:@selector(pushNewController) forControlEvents:UIControlEventTouchUpInside];
+    testButton.frame = CGRectMake(100, 100, 100, 100);
+    [self.view addSubview:testButton];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)pushNewController
+{
+    ViewController *controller = [[ViewController alloc] init];
+    controller.title = [NSString stringWithFormat:@"%zd", self.navigationController.viewControllers.count + 1];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end
