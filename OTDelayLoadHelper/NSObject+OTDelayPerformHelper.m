@@ -7,10 +7,21 @@
 //
 
 #import "NSObject+OTDelayPerformHelper.h"
-#import "OTDelayPerformHelperDeallocAssistantObject.h"
 #import <objc/runtime.h>
 
 static void *DeallocAssistantObjectKey = &DeallocAssistantObjectKey;
+
+@interface OTDelayPerformHelperDeallocAssistantObject : NSObject
+@property (nonatomic, assign) id target;
+@end
+
+@implementation OTDelayPerformHelperDeallocAssistantObject
+- (void)dealloc
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self.target];
+}
+@end
+
 
 @implementation NSObject (OTDelayPerformHelper)
 
@@ -22,9 +33,9 @@ static void *DeallocAssistantObjectKey = &DeallocAssistantObjectKey;
     if (!object)
     {
         object = [[OTDelayPerformHelperDeallocAssistantObject alloc] init];
+        object.target = self;
         objc_setAssociatedObject(self, DeallocAssistantObjectKey, object, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    [object addPerformedSelectorString:NSStringFromSelector(selector) object:anArgument];
 }
 
 @end

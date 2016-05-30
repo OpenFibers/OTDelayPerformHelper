@@ -42,6 +42,8 @@
     [self.view addSubview:testButton];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self autoCanceledPerformSelector:@selector(delayCalledMethod) withObject:nil afterDelay:3];
 }
 
 - (void)pushNewController
@@ -49,6 +51,11 @@
     ViewController *controller = [[ViewController alloc] init];
     controller.title = [NSString stringWithFormat:@"%zd", self.navigationController.viewControllers.count + 1];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (void)delayCalledMethod
+{
+    NSLog(@"delayed called: %@", self.title);
 }
 
 @end
